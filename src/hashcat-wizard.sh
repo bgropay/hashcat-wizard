@@ -15,9 +15,17 @@ function selamatDatang(){
     echo ""
 }
 
+# fungsi memasukkan file hash
+function masukanFileHash(){
+    while true; do
+        read -p "Masukkan jalur ke file hash: " fileHash
+    done
+}
+
 # fungsi hashcat-wizard
 function hashcatWizard(){
-  selamatDatang 
+    selamatDatang
+    masukanFileHash
 }
 
 hashcatWizard
