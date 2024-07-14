@@ -19,6 +19,12 @@ function selamatDatang(){
 function masukanFileHash(){
     while true; do
         read -p "Masukkan jalur ke file hash: " fileHash
+        if [[ ! -f "${fileHash}" ]]; then
+            echo "File hash '${fileHash}' tidak ada."
+            continue
+        else
+            break
+        fi
     done
 }
 
